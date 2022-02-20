@@ -7,6 +7,7 @@ class CounterClass {
     var state:CounterState = CounterState.WAITINGFIRSTNUMBER
     var firstNumber = 0;
     var secondNumber = 0;
+    val resetMessage = "Please type a number"
 
     fun NumberButtonPressed(number:Int) : String
     {
@@ -76,5 +77,12 @@ class CounterClass {
     fun result(fist: Int, second:Int):String
     {
         return "$fist + $second = ${fist+second}"
+    }
+    fun reset() : String
+    {
+        firstNumber = 0
+        secondNumber = 0
+        state = CounterState.WAITINGFIRSTNUMBER
+        return resetMessage
     }
 }

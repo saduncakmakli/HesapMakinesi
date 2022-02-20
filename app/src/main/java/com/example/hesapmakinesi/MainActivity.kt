@@ -57,5 +57,8 @@ class MainActivity : AppCompatActivity() {
         tasarim.buttonEqual.setOnClickListener {
             tasarim.textView.setText(counter.EqualButtonPressed())
         }
+        tasarim.buttonReset.setOnClickListener {
+            tasarim.textView.setText(counter.reset())
+        }
     }
 }
